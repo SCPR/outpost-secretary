@@ -1,0 +1,17 @@
+table {
+    ///////////////////
+    // Secretary::Version
+    &.list-secretary_versions {
+        .column-user {
+            width: 150px;
+        }
+
+        .column-description {
+            width: 350px;
+        }
+
+        .column-versioned {
+            width: 200px;
+        }
+    }
+}
