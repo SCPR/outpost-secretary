@@ -11,7 +11,6 @@ module Outpost
 
       def add_user_id_to_params
         if model.has_secretary?
-          binding.pry
           params[model.singular_route_key].merge!(logged_user_id: current_user.id)
         end
       end
