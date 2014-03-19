@@ -19,8 +19,26 @@ Or install it yourself as:
 
 ## Usage
 
-If you already have secretary-rails installed and configured, then this gem will just work.
-If not, check out the [secretary-rails documentation](https://github.com/SCPR/secretary-rails) for instructions.
+If you already have secretary-rails installed and configured, then all you need to do is add this to your routes:
+
+```ruby
+namespace :outpost do
+  # ...
+
+  get "/activity" => "versions#activity",  as: :activity
+  get "/:resources/:resource_id/history" => "versions#index", as: :history
+  get "/:resources/:resource_id/history/:version_number" => "versions#show", as: :version
+
+  #...
+```
+
+And add the stylesheet to your outpost/application.css:
+
+```scss
+@import 'outpost/secretary';
+```
+
+If Secretary isn't yet installed, check out the [secretary-rails documentation](https://github.com/SCPR/secretary-rails) for instructions.
 
 ## Contributing
 
