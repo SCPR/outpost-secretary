@@ -8,9 +8,10 @@ Gem::Specification.new do |spec|
   spec.version       = Outpost::Secretary::VERSION
   spec.authors       = ["Bryan Ricker"]
   spec.email         = ["bricker88@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = "secretary-rails integration with Outpost."
+  spec.summary       = "Provides views and controllers for" \
+                       "secretary-rails integration with Outpost."
+  spec.homepage      = "https://github.com/SCPR/outpost-secretary"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
