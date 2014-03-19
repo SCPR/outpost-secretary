@@ -38,6 +38,8 @@ And add the stylesheet to your outpost/application.css:
 @import 'outpost/secretary';
 ```
 
+Finally, be sure to add `logged_user_id` to your Strong Parameters where necessary.
+
 If Secretary isn't yet installed, check out the [secretary-rails documentation](https://github.com/SCPR/secretary-rails) for instructions.
 
 ## Contributing
