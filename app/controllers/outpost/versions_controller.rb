@@ -1,8 +1,6 @@
 class Outpost::VersionsController < Outpost::BaseController
   include Outpost::Controller::Ordering
 
-  #--------------
-  # Outpost
   self.model = Secretary::Version
 
   define_list do |l|
@@ -22,12 +20,12 @@ class Outpost::VersionsController < Outpost::BaseController
     l.filter :user_id, collection: -> { Bio.select_collection }
   end
 
-  #--------------
 
   before_filter :set_order_and_direction, only: [:index, :show, :activity]
   before_filter :get_object, only: [:index, :show]
   before_filter :authorize_resource, only: [:index, :show]
   before_filter :extend_breadcrumbs_for_object, only: [:index, :show]
+
 
   #--------------
   # See all activity
@@ -40,6 +38,7 @@ class Outpost::VersionsController < Outpost::BaseController
     render :index
   end
 
+
   #--------------
   # See activity for a single object
   def index
@@ -48,6 +47,7 @@ class Outpost::VersionsController < Outpost::BaseController
     @versions = @object.versions.order(order)
       .page(params[:page]).per(list.per_page)
   end
+
 
   #--------------
   # Compare a version to its previous version
@@ -58,7 +58,6 @@ class Outpost::VersionsController < Outpost::BaseController
       @version.to_title
   end
 
-  #--------------
 
   private
 
@@ -67,7 +66,6 @@ class Outpost::VersionsController < Outpost::BaseController
     @order_direction  = DESCENDING
   end
 
-  #--------------
 
   def get_object
     klass = Outpost::Helpers::Naming.to_class(params[:resources])
@@ -75,13 +73,11 @@ class Outpost::VersionsController < Outpost::BaseController
     @object = klass.find(params[:resource_id])
   end
 
-  #--------------
 
   def authorize_resource
     authorize(@object.class)
   end
 
-  #--------------
 
   def extend_breadcrumbs_for_object
     breadcrumb @object.class.name.titleize.pluralize,

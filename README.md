@@ -1,6 +1,7 @@
-# Outpost::Secretary
+# Outpost/Secretary
 
-TODO: Write a gem description
+[secretary-rails](http://rubygems.org/gems/secretary-rails) integration with Outpost.
+Provides views and controller for Outpost.
 
 ## Installation
 
@@ -18,7 +19,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+If you already have secretary-rails installed and configured, then this gem will just work.
+If not, check out the [secretary-rails documentation](https://github.com/SCPR/secretary-rails) for instructions.
 
 ## Contributing
 
