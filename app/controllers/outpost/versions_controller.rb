@@ -16,8 +16,6 @@ class Outpost::VersionsController < Outpost::BaseController
 
     l.column :version_number, header: "Version"
     l.column :created_at, header: "Timestamp"
-
-    l.filter :user_id, collection: -> { Bio.select_collection }
   end
 
 
@@ -53,6 +51,7 @@ class Outpost::VersionsController < Outpost::BaseController
   # Compare a version to its previous version
   def show
     @version = @object.versions.find_by_version_number!(params[:version_number])
+
     breadcrumb "History",
       outpost_history_path(@object.class.route_key, @object.id),
       @version.to_title
@@ -63,7 +62,7 @@ class Outpost::VersionsController < Outpost::BaseController
 
   def set_order_and_direction
     @order_attribute  = "created_at"
-    @order_direction  = DESCENDING
+    @order_direction  = Outpost::DESCENDING
   end
 
 
