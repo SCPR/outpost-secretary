@@ -6,7 +6,7 @@ module Outpost
       config.autoload_paths << File.expand_path(
         "../../../../app/controllers/concerns", __FILE__)
 
-      Rails.application.config.to_prepare do
+      config.to_prepare do
         # Make versions an outpost model so it can be represented in Outpost.
         ::Secretary::Version.instance_eval do
           outpost_model
