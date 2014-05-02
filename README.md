@@ -40,6 +40,9 @@ Finally, be sure to add `logged_user_id` to your Strong Parameters where necessa
 
 If Secretary isn't yet installed, check out the [secretary-rails documentation](https://github.com/SCPR/secretary-rails) for instructions.
 
+## Todo
+* Needs more tests
+
 ## Contributing
 
 1. Fork it
