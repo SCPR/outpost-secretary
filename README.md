@@ -19,17 +19,15 @@ Or install it yourself as:
 
 ## Usage
 
-If you already have secretary-rails installed and configured, then all you need to do is add this to your routes:
+If you already have secretary-rails installed and configured, then all you need to do is add this to your routes about the "outpost" namespace (the "secretary" name is hardcoded and not optional):
 
 ```ruby
+# ...
+mount Outpost::Secretary::Engine, at: "outpost", as: "secretary"
+
 namespace :outpost do
-  # ...
-
-  get "/activity" => "versions#activity",  as: :activity
-  get "/:resources/:resource_id/history" => "versions#index", as: :history
-  get "/:resources/:resource_id/history/:version_number" => "versions#show", as: :version
-
   #...
+end
 ```
 
 And add the stylesheet to your outpost/application.css:
