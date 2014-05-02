@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 group :test do
-  gem 'outpost-cms'
+  gem 'outpost-cms', github: "SCPR/outpost"
   gem 'secretary-rails'
   gem 'kaminari'
   gem 'activerecord'

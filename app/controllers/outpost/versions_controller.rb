@@ -68,7 +68,7 @@ class Outpost::VersionsController < Outpost::BaseController
 
   def get_object
     klass = Outpost::Helpers::Naming.to_class(params[:resources])
-    redirect_to outpost_root_path if !klass.has_secretary?
+    redirect_to outpost.root_path if !klass.has_secretary?
     @object = klass.find(params[:resource_id])
   end
 

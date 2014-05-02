@@ -19,6 +19,6 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "outpost-cms"
-  spec.add_dependency "secretary-rails"
+  spec.add_dependency "outpost-cms", ['>= 0.0.1', "< 1"]
+  spec.add_dependency "secretary-rails", ['>= 1.0.0', "< 2"]
 end
