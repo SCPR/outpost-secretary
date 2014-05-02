@@ -60,6 +60,13 @@ class Outpost::VersionsController < Outpost::BaseController
 
   private
 
+  # Override this from Outpost to get around kaminari bug:
+  # https://github.com/amatsuda/kaminari/issues/457
+  def route_proxy
+    secretary
+  end
+
+
   def set_order_and_direction
     @order_attribute  = "created_at"
     @order_direction  = Outpost::DESCENDING
