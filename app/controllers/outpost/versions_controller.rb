@@ -53,7 +53,7 @@ class Outpost::VersionsController < Outpost::BaseController
     @version = @object.versions.find_by_version_number!(params[:version_number])
 
     breadcrumb "History",
-      outpost_history_path(@object.class.route_key, @object.id),
+      secretary.history_path(@object.class.route_key, @object.id),
       @version.to_title
   end
 
