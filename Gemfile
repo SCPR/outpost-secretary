@@ -12,4 +12,8 @@ group :test do
   gem "factory_girl", "~> 4.2"
 end
 
+gem 'minitest' # Ruby 2 compat
+gem 'test-unit' # Ruby 2 compat
+gem 'responders', '~> 2.0'
+
 gemspec

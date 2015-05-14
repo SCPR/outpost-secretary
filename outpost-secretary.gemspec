@@ -21,4 +21,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "outpost-cms", ['>= 0.0.1', "< 1"]
   spec.add_dependency "secretary-rails", ['>= 1.0.0', "< 3"]
+  spec.add_dependency "responders", ['>= 2.0', "< 3"]
 end
